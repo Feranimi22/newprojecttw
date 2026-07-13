@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.mon1 img {
+    width: 45%;
+    margin: auto;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(77%) saturate(1094%) hue-rotate(132deg) brightness(95%) contrast(101%)
+}
+
+.mon2 h1 {
+    font-family: "MongoDB Value Serif", "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    padding-top: 7%;
+    color: rgba(0, 104, 75, 0.988);
+}
+
+.mon2 h4 {
+    padding-top: 4%;
+    font-family: "Euclid Circular A";
+    font-weight: 700;
+    line-height: normal;
+    color: rgb(28, 45, 56);
+    font-size: 1.3rem;
+}
+
+.mon2 a {
+    font-family: "Euclid Circular A";
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: rgb(1, 107, 248);
+}
+
+.mon3 {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    border: 0.125rem solid rgb(198, 203, 205);
+    background: white;
+    margin-top: 9%;
+    cursor: pointer;
+    width: 90%;
+    border-radius: 0.58rem;
+
+}
+
+.mon3:hover img {
+    box-shadow: gray;
+}
+
+.mon3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 0.3rem;
+    /* height: 8%; */
+    /* padding-left: 0%; */
+    padding: 0.6rem 1rem;
+    /* margin-left: 10%; */
+}
+
+.mon3 img {
+    width: 2rem;
+    height: auto;
+}
+
+.mon3 h4 {
+    font-size: 1rem;
+    color: gray;
+}
+
+.mon4 {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    border: 0.125rem solid rgb(198, 203, 205);
+    background: white;
+    cursor: pointer;
+    width: 90%;
+    border-radius: 0.58rem;
+    margin-top: 5%;
+}
+
+.mon4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 0.3rem;
+    /* height: 8%; */
+    /* padding-left: 0%; */
+    padding: 0.6rem 1rem;
+    /* padding-bottom: 2%;
+    padding-left: 30%;
+    padding-top: 2%; */
+}
+
+.mon4 img {
+    width: 2rem;
+    height: auto;
+}
+
+.mon4 h4 {
+    display: block;
+    font-size: 1rem;
+    color: rgb(198, 203, 205);
+    /* padding-top: 5%; */
+}
+.miilk h4{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+     font-family: "Euclid Circular A";
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: rgb(198, 203, 205);
+}
+
+.line{
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: rgb(198, 203, 205);
+}
+
+/* .miilk h4 {
+    font-family: "Euclid Circular A";
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: rgb(198, 203, 205);
+} */
+
+#meall {
+    width: 18rem;
+    height: 5vh;
+    border-radius: 0.58rem;
+    border: none;
+    border: 1px solid gray;
+    margin-top: 2%;
+}
+
+.miilk2 h4 {
+    font-family: "Euclid Circular A";
+    font-size: 0.90rem;
+    color: rgba(0, 0, 0, 0.834);
+    padding-top: 8%;
+}
+
+.mmit button {
+    width: 5rem;
+    height: 4.5vh;
+    border-radius: 0.55rem;
+    border: 1px solid rgb(198, 203, 205);
+    margin-top: 20%;
+    font-family: "Euclid Circular A", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 0.99rem;
+font-weight: 500;
+line-height: 1.4rem;
+color: rgb(136, 147, 151);
+}
+
+.mmint {
+    background-image: url(/Multimedia/Imagess/login_promo_desktop_v20260115.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* min-height: 38vh; */
+    /* width: 60%; */
+}
+
+.mmint h1 {
+    font-family: "Euclid Circular A";
+    font-size: 2.2rem;
+    color: rgb(255, 255, 255);
+    /* width: 20%; */
+    font-weight: 700;
+    padding-top: 4%;
+    padding-left: 6%;
+    /* padding: 5%; */
+    width: 40%;
+    /* padding-left: 2%; */
+}
+
+.mmint p {
+    font-family: "Euclid Circular A";
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    /* margin: 0; */
+    width: 30%;
+    line-height: 1.5rem;
+    padding-left: 6%;
+    padding-top: 2%;
+    /* width: 55%; */
+    /* padding: 5%; */
+    /* padding: 8%; */
+}
+
+.mmint a {
+    font-family: "Euclid Circular A";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    color: rgb(255, 255, 255);
+    padding-left: 6%;
+    display: inline-block;
+    /* text-decoration: none; */
+    display: flex;
+    text-decoration: none;
+    /* text-decoration: underline; */
+    align-items: center;
+    margin-top: 4%;
+}
+
+.mmint .default {
+    padding-top: 0.1rem;
+    font-size: 1.5rem;
+    padding-left: 0.55%;
+    text-decoration: none;
+    /* display: flex; */
+
+}
+
+.llilk {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    min-height: 100vh;
+    /* width: 100%;  */
+    /* padding: 0; */
+}
+
+.llilk2 {
+    flex: 0 0 26%;
+    padding: 40px;
+    background: #fff;
+    /* width: 25%; */
+}
+
+.mmint {
+    flex: 0 0 74%;
+}
+
+@media (max-width: 1024px) {
+
+    .llilk2 {
+        flex: 0 0 40%;
+    }
+
+    .mmint {
+        flex: 0 0 60%;
+    }
+
+    .mmint h1 {
+        font-family: "Euclid Circular A";
+        font-size: 1.6rem;
+        color: rgb(255, 255, 255);
+        /* width: 20%; */
+        font-weight: 700;
+        padding-top: 9%;
+        padding-left: 6%;
+        /* padding: 5%; */
+        width: 50%;
+        /* padding-left: 2%; */
+    }
+
+    .mmint p {
+        font-family: "Euclid Circular A";
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        /* margin: 0; */
+        width: 54%;
+        line-height: 1.5rem;
+        padding-left: 6%;
+        padding-top: 4%;
+        /* width: 55%; */
+        /* padding: 5%; */
+        /* padding: 8%; */
+    }
+
+    .mmint a {
+        font-family: "Euclid Circular A";
+        font-size: 0.83rem;
+        font-weight: 700;
+        line-height: 1.8rem;
+        color: rgb(255, 255, 255);
+        padding-left: 6%;
+        display: inline-block;
+        /* text-decoration: none; */
+        display: flex;
+        /* text-decoration: none; */
+        /* text-decoration: underline; */
+        align-items: center;
+        margin-top: 4%;
+    }
+    .miilk h4{
+        font-size: 0.80rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .llilk {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .llilk2 {
+        flex: none;
+        width: 90%;
+    }
+
+    .mmint {
+        display: none;
+    }
+
+    #meall {
+        width: 100%;
+    }
+
+    .mon3,
+    .mon4 {
+        width: 100%;
+    }
+
+    .line{
+        width: 33%;
+        
+    }
+    .miilk h4{
+        font-size: 0.85rem;
+    }
+
+    .mmit button {
+        width: 33rem;
+        height: 6.5vh;
+        border-radius: 0.55rem;
+        border: none;
+        display: block;
+        margin-top: 10%;
+
+    }
+    .llilk{
+        
+        flex-direction: column;
+    }
+    .llilk2{
+        flex: 100%;
+    }
+    .mmint{
+        flex: 100%;
+    }
+
+    .miilk2 #meall {
+        height: 6.5vh;
+    }
+}

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+
+<body>
+        <header class="header">
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="/Multimedia/Imagess/kuyjf3vea2hg34taa-horizontal_default_slate_blue (1).svg"
+                    alt="MongoDB Logo">
+            </div>
+
+            <!-- ── DESKTOP NAV LINKS ─────────────────────── -->
+            <ul class="nav-links">
+
+                <!-- Products -->
+                <li class="dropdown">
+                    <a href="#" class="product-link">
+                        <span>Products</span>
+                        <span class="material-symbols-outlined hover-icon">keyboard_arrow_up</span>
+                        <span class="material-symbols-outlined default-icon">keyboard_arrow_down</span>
+                    </a>
+                    <div class="mega-menu">
+                        <!-- Col 1 -->
+                        <div class="menu-col">
+                            <h4>Platform</h4>
+                            <a href="#" class="item"><strong>Atlas</strong><span>Build and scale with an AI-ready
+                                    platform</span></a>
+                            <h4>Platform Services</h4>
+                            <a href="#" class="item"><strong>Database</strong><span>Deploy a multi-cloud
+                                    database</span></a>
+                            <a href="#" class="item"><strong>Search</strong><span>Deliver engaging search
+                                    experiences</span></a>
+                            <a href="#" class="item"><strong>Vector Search</strong><span>Design intelligent apps with
+                                    gen AI</span></a>
+                            <a href="#" class="item"><strong>Stream Processing</strong><span>Integrate MongoDB and
+                                    Kafka</span></a>
+                            <div class="giggy">
+                                <strong>View All Products</strong>
+                                <span>Explore our full developer suite</span>
+                            </div>
+                        </div>
+                        <!-- Col 2 -->
+                        <div class="menu-col">
+                            <h4>Self Managed</h4>
+                            <a href="#" class="item"><strong>Enterprise Advanced</strong><span>Run and manage MongoDB
+                                    yourself</span></a>
+                            <a href="#" class="item"><strong>Community Edition</strong><span>Develop locally with
+                                    MongoDB</span></a>
+                            <h4>Tools</h4>
+                            <a href="#" class="item"><strong>Compass</strong><span>Work with MongoDB data in a
+                                    GUI</span></a>
+                            <a href="#" class="item"><strong>Integrations</strong><span>Integrations with third-party
+                                    services</span></a>
+                            <a href="#" class="item"><strong>Relational Migrator</strong><span>Migrate to MongoDB with
+                                    confidence</span></a>
+                            <div class="rint">
+                                <strong>MongoDB 8.0</strong>
+                                <span>Our fastest version ever</span>
+                            </div>
+                        </div>
+                        <!-- Col 3 placeholder for layout balance -->
+                        <div class="menu-col"></div>
+                        <!-- Col 4: Side CTAs -->
+                        <div class="menu-col side">
+                            <div class="box">
+                                <h4>Build with MongoDB Atlas</h4>
+                                <p>Get started for free in minutes</p><button>Sign Up</button>
+                            </div>
+                            <div class="box">
+                                <h4>Test Enterprise Advanced</h4>
+                                <p>Develop with MongoDB on-premises</p><button>Download</button>
+                            </div>
+                            <div class="box">
+                                <h4>Try Community Edition</h4>
+                                <p>Explore the latest version of MongoDB</p><button>Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Resources -->
+                <li class="dropdown1">
+                    <a href="#" class="product-link">
+                        <span>Resources</span>
+                        <span class="material-symbols-outlined hover-icon">keyboard_arrow_up</span>
+                        <span class="material-symbols-outlined default-icon">keyboard_arrow_down</span>
+                    </a>
+                    <div class="drify">
+                        <div class="menu-column">
+                            <div class="menu-item"><strong>Documentation</strong><span>Learn how to build with MongoDB
+                                    and get started today</span></div>
+                            <div class="menu-item"><strong>Skills and Certifications</strong><span>Develop in-demand
+                                    skills and earn MongoDB certifications</span></div>
+                            <div class="menu-item"><strong>Books</strong><span>Read books and e-books about
+                                    MongoDB</span></div>
+                            <div class="menu-item1"><strong>Resources Hub</strong><span>Get help building the next big
+                                    thing with MongoDB</span></div>
+                        </div>
+                        <div class="menu-column">
+                            <div class="menu-item"><strong>MongoDB for Educators</strong><span>Take advantage of
+                                    educator resources</span></div>
+                            <div class="menu-item"><strong>MongoDB for Students</strong><span>Take advantage of student
+                                    benefits</span></div>
+                            <div class="menu-item"><strong>Community</strong><span>Join a community of developers</span>
+                            </div>
+                            <div class="menu-item"><strong>Events and Webinars</strong><span>Find an event or webinar
+                                    near you</span></div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Solutions -->
+                <li class="dropdown2" id="solutions-dd">
+                    <a href="#" class="product-link">
+                        <span>Solutions</span>
+                        <span class="material-symbols-outlined hover-icon">keyboard_arrow_up</span>
+                        <span class="material-symbols-outlined default-icon">keyboard_arrow_down</span>
+                    </a>
+                    <div class="dropdown-menuu">
+                        <div class="column">
+                            <h4>Use Cases</h4>
+                            <span>Artificial Intelligence</span><span>Modernization</span><span>Payments</span>
+                            <span>Serverless Development</span><span>Gaming</span><span>Intelligent
+                                Search</span><span>Edge and Mobile</span>
+                            <div class="rary"><strong>Solutions Library</strong><span>Organized and tailored solutions
+                                    to kick-start projects</span></div>
+                        </div>
+                        <div class="column">
+                            <h4>Industries</h4>
+                            <span>Financial Services</span><span>Telecommunications</span><span>Healthcare</span>
+                            <span>Retail</span><span>Public Sector</span><span>Manufacturing</span>
+                        </div>
+                        <div class="column highlight">
+                            <div class="card"><strong>MongoDB AMP</strong>
+                                <p>Modernize applications up to 3x faster</p><a href="#">Learn more →</a>
+                            </div>
+                            <div class="card"><strong>Startups and AI Innovators</strong>
+                                <p>For world-changing ideas and AI pioneers</p><a href="#">Learn more →</a>
+                            </div>
+                            <div class="card"><strong>Customer Case Studies</strong>
+                                <p>Hear directly from our users</p><a href="#">See stories →</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Company -->
+                <li class="dropdown2" id="company-dd">
+                    <a href="#" class="product-link">
+                        <span>Company</span>
+                        <span class="material-symbols-outlined hover-icon">keyboard_arrow_up</span>
+                        <span class="material-symbols-outlined default-icon">keyboard_arrow_down</span>
+                    </a>
+                    <div class="company-menu">
+                        <div class="company-col">
+                            <div class="item"><strong>Careers</strong>
+                                <p>Start your next adventure</p>
+                            </div>
+                            <div class="item"><strong>Blog</strong>
+                                <p>Read articles and announcements</p>
+                            </div>
+                            <div class="item"><strong>Newsroom</strong>
+                                <p>Read press releases and news stories</p>
+                            </div>
+                        </div>
+                        <div class="company-col">
+                            <div class="item"><strong>Partners</strong>
+                                <p>Learn about our partner ecosystem</p>
+                            </div>
+                            <div class="item"><strong>Leadership</strong>
+                                <p>Meet our executive team</p>
+                            </div>
+                            <div class="item"><strong>Company</strong>
+                                <p>Learn more about who we are</p>
+                            </div>
+                        </div>
+                        <div class="company-col right">
+                            <div class="card"><strong>Contact Us</strong>
+                                <p>Reach out to MongoDB</p><a href="#">Connect with an expert →</a>
+                            </div>
+                            <div class="card"><strong>Investors</strong>
+                                <p>Visit our investor portal</p><a href="#">Learn more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="plain">Pricing</li>
+
+                <!-- Right Nav inside ul -->
+                <ul class="nav-right">
+                    <li id="gurr"><span class="material-symbols-outlined gruu">search</span></li>
+                    <li id="gruug"><span class="material-symbols-outlined gruu">language</span>&nbsp;Eng</li>
+                    <li><a href="/Html/support.html">Support</a></li>
+                    <li><a href="/Html/signin.html">Sign In</a></li>
+                    <li id="bint"><button type="button"><a href="/Html/contactus.html">Get Started</a></button></li>
+                </ul>
+            </ul>
+
+            <!-- ── MOBILE: search icon + hamburger ───────── -->
+            <div class="mobile-icons">
+                <div class="icon-btn" id="mobile-search">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <div class="icon-btn" id="prepa" onclick="toggleMobileMenu()">
+                    <span class="material-symbols-outlined" id="hamburger-icon">menu</span>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ── MOBILE PANEL ──────────────────────────────── -->
+    <div class="mobile-panel" id="mobilePanel">
+
+        <!-- Products -->
+        <div class="mobile-section">
+            <div class="mobile-section-header" onclick="toggleSection(this)">
+                Products <span class="material-symbols-outlined">keyboard_arrow_down</span>
+            </div>
+            <div class="mobile-submenu">
+                <div class="mobile-submenu-label">Platform</div>
+                <a href="#">Atlas</a>
+                <div class="mobile-submenu-label">Platform Services</div>
+                <a href="#">Database</a><a href="#">Search</a><a href="#">Vector Search</a><a href="#">Stream
+                    Processing</a>
+                <div class="mobile-divider"></div>
+                <div class="mobile-submenu-label">Self Managed</div>
+                <a href="#">Enterprise Advanced</a><a href="#">Community Edition</a>
+                <div class="mobile-submenu-label">Tools</div>
+                <a href="#">Compass</a><a href="#">Integrations</a><a href="#">Relational Migrator</a>
+            </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="mobile-section">
+            <div class="mobile-section-header" onclick="toggleSection(this)">
+                Resources <span class="material-symbols-outlined">keyboard_arrow_down</span>
+            </div>
+            <div class="mobile-submenu">
+                <a href="#">Documentation</a><a href="#">Skills and Certifications</a>
+                <a href="#">Books</a><a href="#">Resources Hub</a>
+                <div class="mobile-divider"></div>
+                <a href="#">MongoDB for Educators</a><a href="#">MongoDB for Students</a>
+                <a href="#">Community</a><a href="#">Events and Webinars</a>
+            </div>
+        </div>
+
+        <!-- Solutions -->
+        <div class="mobile-section">
+            <div class="mobile-section-header" onclick="toggleSection(this)">
+                Solutions <span class="material-symbols-outlined">keyboard_arrow_down</span>
+            </div>
+            <div class="mobile-submenu">
+                <div class="mobile-submenu-label">Use Cases</div>
+                <a href="#">Artificial Intelligence</a><a href="#">Modernization</a><a href="#">Payments</a>
+                <a href="#">Serverless Development</a><a href="#">Gaming</a><a href="#">Intelligent Search</a>
+                <div class="mobile-divider"></div>
+                <div class="mobile-submenu-label">Industries</div>
+                <a href="#">Financial Services</a><a href="#">Telecommunications</a><a href="#">Healthcare</a>
+                <a href="#">Retail</a><a href="#">Public Sector</a><a href="#">Manufacturing</a>
+            </div>
+        </div>
+
+        <!-- Company -->
+        <div class="mobile-section">
+            <div class="mobile-section-header" onclick="toggleSection(this)">
+                Company <span class="material-symbols-outlined">keyboard_arrow_down</span>
+            </div>
+            <div class="mobile-submenu">
+                <a href="#">Careers</a><a href="#">Blog</a><a href="#">Newsroom</a>
+                <a href="#">Partners</a><a href="#">Leadership</a><a href="#">Company</a>
+            </div>
+        </div>
+
+        <!-- Pricing, Support, Sign In -->
+        <div class="mobile-section">
+            <div class="mobile-section-header" style="cursor:default;">Pricing</div>
+        </div>
+        <div class="mobile-section">
+            <div class="mobile-section-header" style="cursor:default;"><a href="/Html/support.html">Support</a></div>
+        </div>
+        <div class="mobile-section">
+            <div class="mobile-section-header" style="cursor:default;">Sign In</div>
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="mobile-actions">
+            <a href="/Html/signin.html" class="mobile-btn-outline">Sign In</a>
+            <a href="/Html/contactus.html" class="mobile-btn-solid">Get Started</a>
+        </div>
+    </div>
+    <!-- <span id="prepa" class="material-symbols-outlined prepa">menu</span> -->
+    </nav>
+    </header>
+    <div class="containeer">
+        <div class="ience">
+            <div class="enecce">
+                <h4>Select Experience:</h4>
+                <button id="lopr">Developer</button>
+                <button id="lopr1">Business Leader</button>
+            </div>
+        </div>
+        <div class="niffe">
+            <li>New</li>
+            <a href="">Voyage AI models now live on Atlas</a>
+        </div>
+        <div class="fform">
+            <h1>One data platform.<span> Unlimited AI potential.</span></h1>
+            <p>Combine operational data, vectors, and streaming data in a unified platform.</p>
+        </div>
+        <div class="tton">
+            <button id="riff" type="button">Get Started</button>
+            <button id="riff2" type="button">Documentation</button>
+        </div>
+        <div class="gogg">
+            <input type="text" placeholder="Ask MongoDB Assistant">
+            <p>Review answers for accuracy. See our <span>AI and data usage FAQ</span></p>
+        </div>
+        <div class="mmine">
+            <img src="/Multimedia/Imagess/mjitnh3p1wtg5vuzi-Factory.svg" alt="">
+            <img src="/Multimedia/Imagess/mjreusu45oymixan9-Mercor-32.svg" alt="">
+            <img src="/Multimedia/Imagess/mjreqoppok0lcyvlg-Hugging face-32.svg" alt="">
+            <img src="/Multimedia/Imagess/mjitnsb5c6dvgfxoa-Fireworks.svg" alt="">
+
+            <!-- <button>case study</button> -->
+
+            <img src="/Multimedia/Imagess/mjitmdkze5ktd1o5s-Anthropic.svg" alt="">
+            <img src="/Multimedia/Imagess/mfe3zm6fqtnmg53st-Coinbase_Wordmark_White.svg" alt="">
+        </div>
+    </div>
+    <div class="libin">
+        <div class="illsll">
+            <div class="ills">
+                <h4>Level Up Your MongoDB Skills</h4>
+                <p>Access the tools, guides, and training you need to build faster and smarter with MongoDB.</p>
+                <a href="http://">Product Documentation<span
+                        class="material-symbols-outlined defult">chevron_right</span> <span
+                        class="material-symbols-outlined hover">arrow_forward</span></a>
+            </div>
+            <div>
+                <div class="ssslls">
+                    <div class="ills1">
+                        <h4>MongoDB University</h4>
+                        <p>Take free, expert-led courses to sharpen your skills and earn industry-recognized badges.</p>
+                        <a href="http://">Start learning<span
+                                class="material-symbols-outlined defult">chevron_right</span> <span
+                                class="material-symbols-outlined hover">arrow_forward</span></a>
+                    </div>
+                    <div class="llis">
+                        <h4>Atlas Learning Hub</h4>
+                        <p>Discover tutorials, guides, and videos to master Mongodb Atlas and its features.</p>
+                        <a href="http://">Learn more<span class="material-symbols-outlined defult">chevron_right</span>
+                            <span class="material-symbols-outlined hover">arrow_forward</span></a>
+                    </div>
+                    <div class="llis1">
+                        <h4>Build Smarter with AI</h4>
+                        <p>Learn to build intelligent apps with AI tools nad our AI Partner ecosystem</p>
+                        <a href="http://">Visit the Learning Hub<span
+                                class="material-symbols-outlined defult">chevron_right</span> <span
+                                class="material-symbols-outlined hover">arrow_forward</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vinb">
+            <div class="llassa">
+                <h3>MongoDB Atlas</h3>
+                <p>The modern, AI-ready data platform</p>
+            </div>
+            <div class="leene">
+                <a href="http://">Learn about the platform<span
+                        class="material-symbols-outlined defult">chevron_right</span> <span
+                        class="material-symbols-outlined hover">arrow_forward</span></a>
+            </div>
+        </div>
+        <div class="ttorr2">
+
+            <!-- Left Menu -->
+            <ul class="vcto1">
+                <li class="active">Vector Search</li>
+                <li>Stream Processing</li>
+                <li>Operational</li>
+                <li>Transactional</li>
+                <li>Text Search</li>
+                <li>Analytical</li>
+                <li>Graph</li>
+                <li>Geospatial</li>
+            </ul>
+
+            <!-- Right Content -->
+            <div class="ttorr3">
+
+                <div class="ttorr">
+                    <h4>Vector Search Use Cases</h4>
+
+                    <p>
+                        MongoDB Atlas integrates operational and vector databases in a single,
+                        unified platform. Use vector representations of your data to perform
+                        semantic search, build recommendation engines, design Q&A systems,
+                        detect anomalies, or provide context for gen AI Apps.
+                    </p>
+
+                    <div class="mmore">
+                        <button>Learn More</button>
+                        <a href="#">Documentation<span class="material-symbols-outlined defult">chevron_right</span>
+                            <span class="material-symbols-outlined hover">arrow_forward</span></a>
+                    </div>
+                </div>
+
+                <div class="traas">
+                    <img src="/Multimedia/Imagess/lpr2w95dde50v1evs-vs_static_2.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="finrii">
+        <div class="forf1">
+            <h1> Your AI Data Platform is Ready</h1>
+        </div>
+        <div class="atll2">
+            <div class="forf">
+                <div class="riini">
+                    <h4><span> I</span> START HERE</h4>
+                    <h2>Start shipping AI-native applications</h2>
+                    <p>Complex pipelines slow development. Deploy production-ready AI features faster on an AI-ready
+                        data
+                        platform.</p>
+                    <div class="ronr">
+                        <button type="button">Get Started</button>
+                    </div>
+                </div>
+                <div class="runn">
+                    <img src="/Multimedia/Imagess/mk6tuw3mmbhwe4zcf-mongodb_spot.png" alt="">
+                </div>
+            </div>
+            <div class="mink">
+                <div class="atll">
+                    <div class="fink">
+                        <h4><span>I</span> MORE INFORMATION</h4>
+                    </div>
+                    <div>
+                        <ul class="hbub">
+                            <li><i class="bi bi-dot"></i>Atlas Learning Hub<span
+                                    class="material-symbols-outlined defult">chevron_right</span> <span
+                                    class="material-symbols-outlined hover">arrow_forward</span></li>
+                            <li><i class="bi bi-dot"></i>Docs<span
+                                    class="material-symbols-outlined defult">chevron_right</span> <span
+                                    class="material-symbols-outlined hover">arrow_forward</span></li>
+                            <li><i class="bi bi-dot"></i>MongoDB University<span
+                                    class="material-symbols-outlined defult">chevron_right</span> <span
+                                    class="material-symbols-outlined hover">arrow_forward</span></li>
+                            <div class="binkin">
+                                <li><i class="bi bi-dot"></i>Pricing<span
+                                        class="material-symbols-outlined defult">chevron_right</span> <span
+                                        class="material-symbols-outlined hover">arrow_forward</span></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Left section -->
+            <div class="footer-brand">
+                <a href="#">
+                    <img id="cllin" src="/Multimedia/Imagess/kuyjf3vea2hg34taa-horizontal_default_slate_blue (1).svg"
+                        alt="MongoDB">
+                </a>
+
+                <div class="language-dropdown">
+
+                    <h4 class="dropdown-btn">
+                        <span class="material-symbols-outlined">language</span>
+                        English<span class="material-symbols-outlined hover">keyboard_arrow_up</span><span
+                            class="material-symbols-outlined default">keyboard_arrow_down</span>
+                    </h4>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Português</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">한국어</a></li>
+                        <li><a href="#">日本語</a></li>
+                        <li><a href="#">Italiano</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">简体中文</a></li>
+                    </ul>
+
+                </div>
+
+                <p>© 2026 MongoDB, Inc.</p>
+            </div>
+
+            <!-- Column 1 -->
+            <div class="footer-box">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Security Information</a></li>
+                    <li><a href="#">Trust Center</a></li>
+                    <li><a href="#">Follow Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-box">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Customer Portal</a></li>
+                    <li><a href="#">Atlas Status</a></li>
+                    <li><a href="#">Product Updates</a></li>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Manage Cookies</a></li>
+                    <li><a href="#"> <img src="https://www.mongodb.com/#" alt="">
+                            Your Privacy Choices</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-box">
+                <h4>Deployment Options</h4>
+                <ul>
+                    <li><a href="#">MongoDB Atlas</a></li>
+                    <li><a href="#">Enterprise Advanced</a></li>
+                    <li><a href="#">Community Edition</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-box">
+                <h4>Data Basics</h4>
+                <ul>
+                    <li><a href="#">Vector Databases</a></li>
+                    <li><a href="#">NoSQL Databases</a></li>
+                    <li><a href="#">Document Databases</a></li>
+                    <li><a href="#">RAG Database</a></li>
+                    <li><a href="#">ACID Transactions</a></li>
+                    <li><a href="#">MERN Stack</a></li>
+                    <li><a href="#">MEAN Stack</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

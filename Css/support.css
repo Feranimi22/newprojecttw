@@ -1,0 +1,1856 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(0, 30, 43);
+}
+
+.header {
+      width: 100%;
+      background:white;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+    }
+
+    /* ─── NAVBAR ────────────────────────────────── */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 64px;
+      gap: 0;
+    }
+
+    /* ─── LOGO ──────────────────────────────────── */
+    .logo { display: flex; align-items: center; flex-shrink: 0; }
+    .logo img { width: 130px;  }
+
+    /* ─── NAV LINKS (left + right combined list) ─ */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 4px;
+      margin-left: 32px;
+      flex: 1;
+    }
+    
+
+    /* ─── LEFT NAV ITEMS ────────────────────────── */
+    .nav-links > li,
+    .nav-links > .dropdown,
+    .nav-links > .dropdown1,
+    .nav-links > .dropdown2 {
+      position: relative;
+    }
+
+    .nav-links > li > a,
+    .nav-links > li,
+    .product-link {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: black;
+      padding: 0 12px;
+      height: 64px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .nav-links > li.plain {
+      padding: 0 12px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      color: black;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    /* Arrow icons */
+    .product-link .material-symbols-outlined { font-size: 18px; }
+    .product-link .hover-icon { display: none; }
+    .product-link .default-icon { display: inline; }
+
+    .dropdown:hover .product-link .hover-icon,
+    .dropdown1:hover .product-link .hover-icon,
+    .dropdown2:hover .product-link .hover-icon { display: inline; color: #00ED64; }
+    .dropdown:hover .product-link .default-icon,
+    .dropdown1:hover .product-link .default-icon,
+    .dropdown2:hover .product-link .default-icon { display: none; }
+    .dropdown:hover .product-link,
+    .dropdown1:hover .product-link,
+    .dropdown2:hover .product-link { color: #00ED64; }
+
+    /* ─── RIGHT NAV ──────────────────────────────── */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 4px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .nav-right > li {
+      display: flex;
+      align-items: center;
+      height: 64px;
+      padding: 0 10px;
+      cursor: pointer;
+      color:black;
+      font-size: 15px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+    .nav-right > li a {
+      text-decoration: none;
+      color:black;
+      font-size: 15px;
+    }
+    .nav-right > li:hover { color: #00ED64; }
+    .nav-right > li:hover a { color: #00ED64; }
+
+    /* Search icon */
+    #gurr .gruu { font-size: 20px; color:black; transition: color 0.2s; }
+    #gurr:hover .gruu { color: #00ED64; }
+
+    /* Language */
+    #gruug { gap: 4px; }
+    #gruug .gruu { font-size: 18px; }
+
+    /* Get Started button */
+    #bint button {
+      background: #00ED64;
+      border: none;
+      padding: 0 20px;
+      height: 38px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #001E2B;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: border-radius 0.25s, background 0.2s;
+    }
+    #bint button:hover { border-radius: 20px; }
+    #bint button a { color: #001E2B; text-decoration: none; font-weight: 600; }
+
+    /* ─── HAMBURGER (hidden on desktop) ─────────── */
+    #prepa {
+      display: none;
+      font-size: 28px;
+      color:black;
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    /* ════════════════════════════════════════════
+       MEGA MENU — PRODUCTS
+    ════════════════════════════════════════════ */
+    .mega-menu {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 860px;
+      background: white;
+      padding: 28px 28px 20px;
+      border-radius: 0 0 16px 16px;
+      display: none;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      gap: 32px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      z-index: 2000;
+    }
+    .dropdown:hover .mega-menu { display: grid; }
+
+    .menu-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: black;
+      margin-bottom: 14px;
+      margin-top: 18px;
+    }
+    .menu-col h4:first-child { margin-top: 0; }
+
+    .item {
+      display: block;
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-bottom: 2px;
+      transition: background 0.15s;
+    }
+    .item:hover { background: #001E2B; }
+    .item strong { display: block; font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 2px; }
+    .item span { font-size: 12px; color: #9FB3AD; line-height: 1.4; }
+
+    /* giggy / rint dividers */
+    .giggy, .rint {
+      border-top: 1px solid #3a4b52;
+      margin-top: 12px;
+      padding-top: 12px;
+      cursor: pointer;
+    }
+    .giggy strong, .rint strong { font-size: 14px; font-weight: 500; color: black; display: block; margin-bottom: 3px; }
+    .giggy span, .rint span { font-size: 12px; color: black; }
+    .giggy:hover, .rint:hover { background: white; border-radius: 6px; padding-left: 6px; }
+
+    /* Side column */
+    .side { border-left: 1px solid black; padding-left: 20px; min-width: 180px; }
+    .side .box { padding: 12px 10px; border-bottom: 1px solid black; margin-bottom: 8px; }
+    .side .box:last-child { border-bottom: none; }
+    .side .box h4 { font-size: 13px; font-weight: 600; color: black; margin-bottom: 4px; text-transform: none; letter-spacing: 0; margin-top: 0; }
+    .side .box p { font-size: 12px; color: black; margin-bottom: 10px; line-height: 1.4; }
+    .side .box button {
+      padding: 6px 16px;
+      background: transparent;
+      border: 1px solid #3BD671;
+      color: #3BD671;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .side .box button:hover { background: #3BD671; color: #001E2B; }
+
+    /* ════════════════════════════════════════════
+       RESOURCES DROPDOWN
+    ════════════════════════════════════════════ */
+    .drify {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 560px;
+      background: white;
+      padding: 24px;
+      border-radius: 0 0 16px 16px;
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      z-index: 2000;
+    }
+    .dropdown1:hover .drify { display: grid; }
+
+    .menu-column { display: flex; flex-direction: column; gap: 6px; }
+    .menu-item, .menu-item1 {
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .menu-item:hover, .menu-item1:hover { background: white; }
+    .menu-item strong, .menu-item1 strong { display: block; font-size: 14px; font-weight: 500; color: black; margin-bottom: 3px; }
+    .menu-item span, .menu-item1 span { font-size: 12px; color: black; line-height: 1.4; }
+    .menu-item1 { border-top: 1px solid black; margin-top: 6px; padding-top: 14px; }
+
+    /* ════════════════════════════════════════════
+       SOLUTIONS DROPDOWN
+    ════════════════════════════════════════════ */
+    .dropdown-menuu {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 760px;
+      background:white;
+      padding: 28px;
+      border-radius: 0 0 16px 16px;
+      display: none;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+    .dropdown2:hover .dropdown-menuu { display: grid; opacity: 1; visibility: visible; }
+
+    .column { display: flex; flex-direction: column; gap: 10px; }
+    .column h4 { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; color: black; text-transform: uppercase; }
+    .column > span { font-size: 14px; font-weight: 500; color: black; padding: 4px 8px; border-radius: 4px; cursor: pointer; transition: background 0.15s; }
+    .column > span:hover { background: rgba(255, 255, 255, 0.432); }
+
+    .rary { border-top: 1px solid #3a4b52; padding-top: 12px; margin-top: 8px; }
+    .rary strong { display: block; font-size: 14px; font-weight: 500; color: black; margin-bottom: 3px; }
+    .rary span { font-size: 12px; color: black; line-height: 1.4; }
+
+    .highlight { border-left: 1px solid black; padding-left: 24px; }
+    .highlight .card { background: white; padding: 14px; border-radius: 8px; margin-bottom: 10px; border-bottom: 1px solid black; }
+    .highlight .card:last-child { border-bottom: none; margin-bottom: 0; }
+    .card strong { display: block; font-size: 14px; font-weight: 500; color: black; margin-bottom: 4px; }
+    .card p { font-size: 12px; color: black; margin-bottom: 6px; line-height: 1.4; }
+    .card a { font-size: 13px; color: black; text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+
+    /* ════════════════════════════════════════════
+       COMPANY DROPDOWN
+    ════════════════════════════════════════════ */
+    .company-menu {
+      position: absolute;
+      top: 64px;
+      left: -180px;
+      width: 680px;
+      background: white;
+      padding: 28px;
+      border-radius: 0 0 16px 16px;
+      display: none;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+    .dropdown2:hover .company-menu { display: grid; opacity: 1; visibility: visible; }
+
+    .company-col { display: flex; flex-direction: column; gap: 18px; }
+    .company-col .item strong { font-size: 14px; font-weight: 500; color:black; }
+    .company-col .item p { font-size: 12px; color: black; margin-top: 3px; }
+
+    .company-col.right { border-left: 1px solid black; padding-left: 24px; }
+    .company-col.right .card { background: white; padding: 14px; border-radius: 8px; }
+    .company-col.right .card strong { font-size: 14px; font-weight: 500; color: black; display: block; margin-bottom: 4px; }
+    .company-col.right .card p { font-size: 12px; color: black; margin-bottom: 6px; }
+    .company-col.right .card a { font-size: 13px; color: black; text-decoration: none; }
+
+    /* Fix: only one company-menu per dropdown2 hover */
+    .dropdown2:nth-of-type(2):hover .dropdown-menuu { display: none; opacity: 0; visibility: hidden; }
+    .dropdown2:nth-of-type(2):hover .company-menu { display: grid; opacity: 1; visibility: visible; }
+
+    /* ════════════════════════════════════════════
+       MOBILE PANEL
+    ════════════════════════════════════════════ */
+    .mobile-panel {
+      display: none;
+      position: fixed;
+      top: 64px; left: 0; right: 0; bottom: 0;
+      background: #001E2B;
+      overflow-y: auto;
+      z-index: 999;
+      padding: 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      flex-direction: column;
+    }
+    .mobile-panel.open { display: flex; }
+
+    .mobile-section {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      color: #ECFEF3;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .mobile-section-header:hover { background: gray; }
+    .mobile-section-header .material-symbols-outlined { font-size: 20px; color: #9FB3AD; transition: transform 0.2s; }
+    .mobile-section-header.active .material-symbols-outlined { transform: rotate(180deg); color: #00ED64; }
+    .mobile-section-header.active { color: #00ED64; }
+
+    .mobile-submenu {
+      display: none;
+      padding: 8px 0 16px;
+      background: #0d2535;
+    }
+    .mobile-submenu.open { display: block; }
+
+    .mobile-submenu a
+    .mobile-submenu-item {
+      display: block;
+      padding: 12px 32px;
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.15s, color 0.15s;
+      cursor: pointer;
+    }
+    .mobile-submenu a:hover,
+    .mobile-submenu-item:hover { background: gray; color: #00ED64; }
+
+    .mobile-submenu-label {
+      padding: 14px 24px 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #8FA19B;
+    }
+
+    .mobile-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 8px 24px; }
+
+    .mobile-actions {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: auto;
+    }
+    .mobile-actions a {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .mobile-btn-outline {
+      color: #ECFEF3;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .mobile-btn-solid {
+      background: #00ED64;
+      color: #001E2B;
+      font-weight: 700;
+    }
+
+.firee {
+    width: 100%;
+
+}
+
+.firee h1 {
+    font-family: "MongoDB Value Serif", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 5rem;
+    color: rgb(255, 255, 255);
+    width: 70%;
+    padding-top: 15%;
+}
+
+.firee span {
+    color: rgb(0, 187, 86);
+}
+
+.firee p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: rgb(184, 196, 194);
+    width: 75%;
+}
+
+.firee2 {
+    width: 100%;
+}
+
+.firee2 img {
+    width: 95%;
+}
+
+.fireee {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.fireee {
+    width: 95%;
+    padding-top: 12%;
+    margin: auto;
+}
+
+.firee3 img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+
+    /* filter: grayscale(100) brightness(0) invert(1); */
+
+}
+
+.firee3 {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.firee3 h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.firee3 p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 75%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.firee3 a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    display: flex;
+    padding-left: 7%;
+}
+.firee3 .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.firee3 .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+.firee3 a:hover .defult {
+    display: none;
+}
+
+.firee3 a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.firee3 a:hover {
+    color: rgb(20, 141, 92);
+}
+
+
+.firee4 {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 12%;
+}
+
+.rang img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.rang h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.rang p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 75%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.rang a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.rang .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.rang .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+.rang a:hover .defult {
+    display: none;
+}
+
+.rang a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.rang a:hover {
+    color: rgb(20, 141, 92);
+}
+
+.rang {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.fref h4 {
+    font-family: "Euclid Circular A";
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: rgb(255, 255, 255);
+    padding-top: 6%;
+    padding-left: 4%;
+}
+
+.rual img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.rual h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.rual p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 65%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.rual a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.rual .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.rual .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+.rual a:hover .defult {
+    display: none;
+}
+
+.rual a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.rual a:hover {
+    color: rgb(20, 141, 92);
+}
+
+.rual {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.rual1 img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.rual1 h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.rual1 p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 70%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.rual1 a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.rual1 .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.rual1 .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+.rual1 a:hover .defult {
+    display: none;
+}
+
+.rual1 a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.rual1 a:hover {
+    color: rgb(20, 141, 92);
+}
+
+.rual1 {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.rurur {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+
+.cill img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.cill h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.cill p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 73%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.cill a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.cill .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.cill .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+.cill a:hover .defult {
+    display: none;
+}
+
+.cill a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.cill a:hover {
+    color: rgb(20, 141, 92);
+}
+.cill {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.cill1 img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.cill1 h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.cill1 p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 73%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.cill1 a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.cill1 .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.cill1 .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+.cill1 a:hover .defult {
+    display: none;
+}
+
+.cill1 a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.cill1 a:hover {
+    color: rgb(20, 141, 92);
+}
+
+.cill1 {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.clclc {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+
+.finll h4 {
+    font-family: "Euclid Circular A";
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: rgb(255, 255, 255);
+    padding-top: 6%;
+    padding-left: 4%;
+}
+
+.unni img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.unni h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.unni p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 73%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.unni a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.unni .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.unni .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+.unni a:hover .defult {
+    display: none;
+}
+
+.unni a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.unni a:hover {
+    color: rgb(20, 141, 92);
+}
+
+.unni {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.unni1 img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.unni1 h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.unni1 p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 73%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.unni1 a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.unni1 .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.unni1 .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+.unni1 a:hover .defult {
+    display: none;
+}
+
+.unni1 a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.unni1 a:hover {
+    color: rgb(20, 141, 92);
+}
+
+.unni1 {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.unniu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+
+.tinter img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.tinter h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.tinter p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 73%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.tinter a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.tinter .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.tinter .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+ .tinter a:hover .defult {
+    display: none;
+}
+
+.tinter a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.tinter a:hover {
+    color: rgb(20, 141, 92);
+}
+
+.tinter {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.tinter1 img {
+    width: 15%;
+    padding-top: 8%;
+    padding-left: 7%;
+}
+
+.tinter1 h4 {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.tinter1 p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgb(93, 108, 116);
+    width: 73%;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.tinter1 a {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: rgb(0, 30, 43);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8%;
+    padding-left: 7%;
+    display: flex;
+}
+.tinter1 .defult {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+/* hover arrow hidden */
+.tinter1 .hover {
+    display: none;
+    font-size: 2rem;
+}
+
+/* when hovering link */
+ .tinter1 a:hover .defult {
+    display: none;
+}
+
+.tinter1 a:hover .hover {
+    display: inline;
+    color: rgb(0, 30, 43);
+}
+
+.tinter1 a:hover {
+    color: rgb(20, 141, 92);
+}
+
+
+.tinter1 {
+    border: 0.10rem solid white;
+    width: 45%;
+    height: 55vh;
+    background-color: #ffff;
+    border-radius: 2.5rem;
+}
+
+.tintt {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+
+.iddea h1 {
+    font-family: "MongoDB Value Serif", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 3.3rem;
+    font-weight: 400;
+    line-height: 3.8rem;
+    color: rgb(255, 255, 255);
+}
+
+.iddea p {
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: rgb(184, 196, 194);
+    width: 75%;
+    padding-top: 5%;
+}
+
+.iddea {
+    width: 60%;
+    padding-left: 15%;
+    padding-top: 10%;
+}
+
+.iddea button {
+    width: 20%;
+    height: 6vh;
+    font-family: "Euclid Circular A", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1rem;
+    margin-top: 5%;
+    border: none;
+    background-color: rgb(0, 237, 100);
+    color: rgb(0, 30, 43);
+}
+
+.iddea:hover button {
+    width: 20%;
+    height: 6vh;
+    border-radius: 1.5rem;
+}
+
+#mage {
+    width: 30%;
+}
+
+.dake {
+    background-color: rgb(2, 52, 48);
+    margin-top: 5%;
+}
+
+.didtr {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.footer {
+    background: #001E2B;
+    color: white;
+    padding: 60px 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-brand img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-brand h4 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    padding-top: 90%;
+    font-size: 13px;
+    color: #9CA3AF;
+}
+
+.footer-box h4 {
+    font-family: "Akzidenz-Grotesk Std", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+
+}
+
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+    font-family: "Akzidenz-Grotesk Std", "Noto Sans KR", "Noto Sans SC", "Noto Sans JP";
+    font-size: 0.98rem;
+    font-weight: 300;
+    line-height: 3rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+
+
+}
+
+.footer-box ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.language-dropdown {
+    position: relative;
+    width: 180px;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    list-style: none;
+    /* background:white; */
+    /* color:black; */
+    box-shadow: rgb(251, 253, 254);
+    background-color: rgb(33, 49, 60);
+    position: absolute;
+    bottom: 40px;
+    top: 100%;
+    left: 0;
+    height: 45vh;
+    width: 73%;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+
+    color: white;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background: #f2f2f25c;
+    cursor: pointer;
+
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-btn .hover {
+    display: none;
+}
+
+.dropdown-btn.default {
+    align-items: center;
+    font-size: 1rem;
+}
+
+.dropdown-btn:hover .hover {
+    display: flex;
+    padding-left: 3%;
+    font-size: 1rem;
+
+}
+
+.dropdown-btn:hover .default {
+    display: none;
+}
+
+/* show dropdown */
+.language-dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE MEDIA QUERIES — support.css
+   Paste these at the very bottom of support.css
+═══════════════════════════════════════════════════════════ */
+
+
+/* ── Mobile icons row (missing from original CSS) ─────── */
+.mobile-icons {
+    display: none;
+    align-items: center;
+    gap: 8px;
+}
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    color: #001E2B;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.icon-btn:hover { background: rgba(0,0,0,0.06); }
+.icon-btn .material-symbols-outlined { font-size: 24px; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   TABLET  ≤ 1024px
+═══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+    /* ── NAV: hide desktop links, show hamburger ── */
+    .nav-links   { display: none; }
+    .mobile-icons { display: flex; }
+    .navbar { padding: 0 24px; }
+
+    /* ── HERO: reduce top padding, let it breathe ── */
+    .fireee {
+        width: 100%;
+        padding-top: 10%;
+        gap: 20px;
+    }
+    .firee h1 {
+        font-size: 3rem;
+        line-height: 3.6rem;
+        width: 90%;
+        padding-top: 12%;
+    }
+    .firee p {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+    .firee2 img { width: 100%; }
+
+    /* ── All card rows: slightly reduce gap ── */
+    .firee4, .rurur, .clclc, .unniu, .tintt {
+        padding-top: 8%;
+        margin-top: 3%;
+    }
+
+    /* ── All cards: drop fixed height so text never clips ── */
+    .firee3, .rang,
+    .rual, .rual1,
+    .cill, .cill1,
+    .unni, .unni1,
+    .tinter, .tinter1 {
+        height: auto;
+        min-height: 280px;
+        padding-bottom: 6%;
+    }
+
+    /* ── Card headings and text ── */
+    .firee3 h4, .rang h4,
+    .rual h4,  .rual1 h4,
+    .cill h4,  .cill1 h4,
+    .unni h4,  .unni1 h4,
+    .tinter h4, .tinter1 h4 {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    .firee3 p, .rang p,
+    .rual p,  .rual1 p,
+    .cill p,  .cill1 p,
+    .unni p,  .unni1 p,
+    .tinter p, .tinter1 p {
+        font-size: 0.95rem;
+        width: 88%;
+    }
+
+    /* ── Section labels ── */
+    .fref h4, .finll h4 { font-size: 2rem; }
+
+    /* ── CTA banner ── */
+    .iddea h1 { font-size: 2.8rem; line-height: 3.2rem; }
+    .iddea p  { font-size: 0.95rem; width: 85%; }
+    .iddea button { width: 30%; min-height: 44px; }
+    #mage { width: 36%; }
+
+    /* ── Footer ── */
+    .footer-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+    }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-brand p { padding-top: 24px; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE  ≤ 768px
+═══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    .navbar { padding: 0 16px; }
+
+    /* ── HERO: stack vertically ── */
+    .fireee {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 92%;
+        padding-top: 22%;
+        gap: 28px;
+    }
+    .firee {
+        width: 100%;
+    }
+    .firee h1 {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        width: 100%;
+        padding-top: 0;
+    }
+    .firee p {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        width: 100%;
+        padding-top: 4%;
+    }
+    .firee2 {
+        width: 100%;
+    }
+    .firee2 img {
+        width: 100%;
+        display: block;
+    }
+
+    /* ── ALL card rows: stack vertically ── */
+    .firee4, .rurur, .clclc, .unniu, .tintt {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10%;
+        margin-top: 0;
+        gap: 20px;
+    }
+
+    /* ── ALL cards: full width, auto height ── */
+    .firee3, .rang,
+    .rual,  .rual1,
+    .cill,  .cill1,
+    .unni,  .unni1,
+    .tinter, .tinter1 {
+        width: 92%;
+        height: auto;
+        min-height: unset;
+        border-radius: 1.5rem;
+        padding-bottom: 8%;
+    }
+
+    /* ── Card icons: a little larger padding on mobile ── */
+    .firee3 img, .rang img,
+    .rual img,  .rual1 img,
+    .cill img,  .cill1 img,
+    .unni img,  .unni1 img,
+    .tinter img, .tinter1 img {
+        width: 14%;
+        padding-top: 6%;
+        padding-left: 6%;
+    }
+
+    /* ── Card headings ── */
+    .firee3 h4, .rang h4,
+    .rual h4,  .rual1 h4,
+    .cill h4,  .cill1 h4,
+    .unni h4,  .unni1 h4,
+    .tinter h4, .tinter1 h4 {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        padding-left: 6%;
+    }
+
+    /* ── Card body text ── */
+    .firee3 p, .rang p,
+    .rual p,  .rual1 p,
+    .cill p,  .cill1 p,
+    .unni p,  .unni1 p,
+    .tinter p, .tinter1 p {
+        font-size: 0.92rem;
+        line-height: 1.4rem;
+        width: 88%;
+        padding-left: 6%;
+    }
+
+    /* ── Card links ── */
+    .firee3 a, .rang a,
+    .rual a,  .rual1 a,
+    .cill a,  .cill1 a,
+    .unni a,  .unni1 a,
+    .tinter a, .tinter1 a {
+        font-size: 0.9rem;
+        padding-left: 6%;
+        padding-top: 6%;
+    }
+
+    /* ── Section labels ── */
+    .fref h4 {
+        font-size: 1.7rem;
+        padding-top: 10%;
+        padding-left: 4%;
+    }
+    .finll h4 {
+        font-size: 1.7rem;
+        padding-top: 10%;
+        padding-left: 4%;
+    }
+
+    /* ── CTA banner: stack image below text ── */
+    .dake { margin-top: 10%; }
+    .didtr {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10%;
+        padding-bottom: 8%;
+        gap: 32px;
+    }
+    .iddea {
+        width: 90%;
+        padding-left: 5%;
+        padding-top: 0;
+        text-align: left;
+    }
+    .iddea h1 {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+    }
+    .iddea p {
+        font-size: 1rem;
+        width: 95%;
+        padding-top: 4%;
+    }
+    .iddea button {
+        width: auto;
+        padding: 0 28px;
+        height: 48px;
+        font-size: 1rem;
+        margin-top: 6%;
+        border-radius: 0;
+    }
+    /* Remove hover width change so it doesn't snap on mobile */
+    .iddea:hover button { width: auto; border-radius: 1.5rem; }
+    #mage {
+        width: 72%;
+        max-width: 320px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* ── Footer ── */
+    .footer { padding: 40px 20px; }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-brand p { padding-top: 20px; }
+    .footer-brand img { width: 110px; }
+    .language-dropdown { width: 160px; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   SMALL MOBILE  ≤ 480px
+═══════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+    .navbar { padding: 0 12px; }
+    .logo img { width: 110px; }
+
+    /* ── HERO ── */
+    .fireee {
+        width: 95%;
+        padding-top: 26%;
+        gap: 20px;
+    }
+    .firee h1 {
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+    }
+    .firee p {
+        font-size: 1rem;
+        line-height: 1.55rem;
+    }
+
+    /* ── Cards ── */
+    .firee4, .rurur, .clclc, .unniu, .tintt {
+        padding-top: 12%;
+        gap: 16px;
+    }
+    .firee3, .rang,
+    .rual,  .rual1,
+    .cill,  .cill1,
+    .unni,  .unni1,
+    .tinter, .tinter1 {
+        width: 95%;
+        border-radius: 1.2rem;
+    }
+
+    .firee3 img, .rang img,
+    .rual img,  .rual1 img,
+    .cill img,  .cill1 img,
+    .unni img,  .unni1 img,
+    .tinter img, .tinter1 img {
+        width: 16%;
+        padding-top: 6%;
+        padding-left: 5%;
+    }
+
+    .firee3 h4, .rang h4,
+    .rual h4,  .rual1 h4,
+    .cill h4,  .cill1 h4,
+    .unni h4,  .unni1 h4,
+    .tinter h4, .tinter1 h4 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        padding-left: 5%;
+        padding-top: 3%;
+    }
+
+    .firee3 p, .rang p,
+    .rual p,  .rual1 p,
+    .cill p,  .cill1 p,
+    .unni p,  .unni1 p,
+    .tinter p, .tinter1 p {
+        font-size: 0.88rem;
+        width: 90%;
+        padding-left: 5%;
+        padding-top: 3%;
+    }
+
+    .firee3 a, .rang a,
+    .rual a,  .rual1 a,
+    .cill a,  .cill1 a,
+    .unni a,  .unni1 a,
+    .tinter a, .tinter1 a {
+        font-size: 0.85rem;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+
+    /* ── Arrow icons: scale down ── */
+    .firee3 .defult, .rang .defult,
+    .rual .defult,  .rual1 .defult,
+    .cill .defult,  .cill1 .defult,
+    .unni .defult,  .unni1 .defult,
+    .tinter .defult, .tinter1 .defult,
+    .firee3 .hover, .rang .hover,
+    .rual .hover,  .rual1 .hover,
+    .cill .hover,  .cill1 .hover,
+    .unni .hover,  .unni1 .hover,
+    .tinter .hover, .tinter1 .hover {
+        font-size: 1.4rem;
+    }
+
+    /* ── Section labels ── */
+    .fref h4, .finll h4 {
+        font-size: 1.4rem;
+        padding-left: 4%;
+        padding-top: 10%;
+    }
+
+    /* ── CTA banner ── */
+    .iddea { width: 95%; padding-left: 4%; }
+    .iddea h1 { font-size: 2rem; line-height: 2.4rem; }
+    .iddea p  { font-size: 0.9rem; }
+    .iddea button {
+        width: 100%;
+        max-width: 200px;
+        height: 46px;
+        font-size: 0.95rem;
+    }
+    #mage { width: 85%; max-width: 260px; }
+
+    /* ── Footer: single column ── */
+    .footer { padding: 32px 16px; }
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .footer-brand { grid-column: 1; }
+    .footer-brand p { padding-top: 16px; }
+    .footer-box h4    { font-size: 0.95rem; margin-bottom: 10px; }
+    .footer-box ul li a { font-size: 0.88rem; line-height: 2.4rem; }
+
+    /* ── Mobile panel scroll ── */
+    .mobile-panel { -webkit-overflow-scrolling: touch; }
+}
